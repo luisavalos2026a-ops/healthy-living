@@ -1,0 +1,123 @@
+.hero {
+    text-align: center;
+    padding: 4rem 0 6rem;
+    background: linear-gradient(180deg, var(--color-sand) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.featureCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.featureIcon {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(79, 121, 66, 0.1);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-main);
+}
+
+.featureText {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.testimonials {
+    padding-bottom: 6rem;
+}
+
+.testimonialGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonialCard {
+    background-color: var(--color-sand);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.authorInitial {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.authorRole {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}

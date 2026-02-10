@@ -1,0 +1,120 @@
+.levelsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.levelSection {
+    scroll-margin-top: 100px;
+}
+
+.levelHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.levelBadge {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--color-white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.beginnerBadge {
+    background-color: var(--color-fern);
+}
+
+.intermediateBadge {
+    background-color: #D3A29D;
+}
+
+/* Muted Red/Clay */
+.advancedBadge {
+    background-color: #2D3436;
+}
+
+.levelTitle {
+    font-size: 2rem;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.planCard {
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 4px solid transparent;
+}
+
+.beginnerCard {
+    border-left-color: var(--color-fern);
+}
+
+.intermediateCard {
+    border-left-color: #D3A29D;
+}
+
+.advancedCard {
+    border-left-color: #2D3436;
+}
+
+.planHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.planTitle {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.planDescription {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+}
+
+.planMeta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.focusTags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.focusTag {
+    background-color: var(--color-sand);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
