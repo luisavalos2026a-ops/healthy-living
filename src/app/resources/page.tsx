@@ -8,7 +8,8 @@ import styles from './resources.module.css';
 
 export default function Resources() {
     // BMI Calculator State
-    const [height, setHeight] = useState('');
+    const [feet, setFeet] = useState('');
+    const [inches, setInches] = useState('');
     const [weight, setWeight] = useState('');
     const [bmi, setBmi] = useState<number | null>(null);
 
@@ -17,11 +18,16 @@ export default function Resources() {
     const dailyGoal = 8; // glasses
 
     const calculateBMI = () => {
-        const h = parseFloat(height) / 100; // convert cm to m
+        const ft = parseFloat(feet);
+        const inch = parseFloat(inches);
         const w = parseFloat(weight);
-        if (h > 0 && w > 0) {
-            const bmiValue = w / (h * h);
-            setBmi(parseFloat(bmiValue.toFixed(1)));
+
+        if (ft >= 0 && inch >= 0 && w > 0) {
+            const totalInches = (ft * 12) + inch;
+            if (totalInches > 0) {
+                const bmiValue = (703 * w) / (totalInches * totalInches);
+                setBmi(parseFloat(bmiValue.toFixed(1)));
+            }
         }
     };
 
@@ -50,24 +56,33 @@ export default function Resources() {
                         </div>
 
                         <div className={styles.inputGroup}>
-                            <label className={styles.label}>Height (cm)</label>
-                            <input
-                                type="number"
-                                className={styles.input}
-                                value={height}
-                                onChange={(e) => setHeight(e.target.value)}
-                                placeholder="e.g. 175"
-                            />
+                            <label className={styles.label}>Height</label>
+                            <div style={{ display: 'flex', gap: '1rem' }}>
+                                <input
+                                    type="number"
+                                    className={styles.input}
+                                    value={feet}
+                                    onChange={(e) => setFeet(e.target.value)}
+                                    placeholder="ft"
+                                />
+                                <input
+                                    type="number"
+                                    className={styles.input}
+                                    value={inches}
+                                    onChange={(e) => setInches(e.target.value)}
+                                    placeholder="in"
+                                />
+                            </div>
                         </div>
 
                         <div className={styles.inputGroup}>
-                            <label className={styles.label}>Weight (kg)</label>
+                            <label className={styles.label}>Weight (lbs)</label>
                             <input
                                 type="number"
                                 className={styles.input}
                                 value={weight}
                                 onChange={(e) => setWeight(e.target.value)}
-                                placeholder="e.g. 70"
+                                placeholder="e.g. 150"
                             />
                         </div>
 
